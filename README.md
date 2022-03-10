@@ -1,0 +1,3 @@
+# site
+
+Starter site template.
