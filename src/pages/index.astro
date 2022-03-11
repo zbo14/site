@@ -1,9 +1,15 @@
 ---
 import DefaultLayout from '../layouts/default.astro'
-import Foo from '../components/Foo.astro'
 ---
+
+<style></style>
 
 <DefaultLayout>
   <p>Welcome to astrosite!</p>
-  <Foo />
 </DefaultLayout>
+
+<script hoist type="module">
+  import '/src/client/foo'
+
+  window.foo()
+</script>

@@ -1,3 +1,3 @@
 # site
 
-Starter site template.
+Site starter template.

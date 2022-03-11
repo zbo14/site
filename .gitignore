@@ -15,6 +15,3 @@ yarn-error.log*
 
 # macOS-specific files
 .DS_Store
-
-# styles are compiled
-src/styles

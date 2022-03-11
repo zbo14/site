@@ -2,10 +2,9 @@
   "name": "site",
   "version": "0.0.1",
   "scripts": {
-    "dev": "bash scripts/dev.sh",
-    "less": "bash scripts/less.sh",
+    "dev": "astro dev",
     "start": "npm run dev",
-    "build": "npm run less; astro build",
+    "build": "astro build",
     "preview": "astro preview"
   },
   "devDependencies": {
