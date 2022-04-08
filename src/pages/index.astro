@@ -1,14 +1,39 @@
 ---
 import DefaultLayout from '../layouts/default.astro'
+import MyDropdown from '../components/MyDropdown.vue'
+import MyError from '../components/MyError.vue'
+import MyModal from '../components/MyModal.vue'
+import MyWarning from '../components/MyWarning.vue'
+import MySuccess from '../components/MySuccess.vue'
+import MyInfo from '../components/MyInfo.vue'
+import MyExampleCard from '../components/MyExampleCard.vue'
+
+const links = [
+  { label: 'option1', url: '#foo' },
+  { label: 'option2', url: '#bar' }
+]
 ---
 
-<style></style>
-
 <DefaultLayout>
-  <p>Welcome to astrosite!</p>
+  <p class="my-4 text-xl">Welcome to your site!</p>
+  <p class="my-4 text-lg">Here are some components:</p>
+  <div>
+    <MyModal
+      label="hello modal"
+      title="Hello modal">
+      <p>modal content</p>
+    </MyModal>
+
+    <MyDropdown links={links} />
+    <MyError message="this is an error message" />
+    <MyWarning message="this is a warning message" />
+    <MySuccess message="this is a success message" />
+    <MyInfo message="this is an info message" />
+    <MyExampleCard />
+  </div>
 </DefaultLayout>
 
-<script hoist type="module">
+<script type="module">
   import '/src/client/foo'
 
   window.foo()
