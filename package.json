@@ -1,14 +1,26 @@
 {
   "name": "site",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "prettier": "prettier-config-standard",
   "scripts": {
     "dev": "astro dev",
+    "lint": "prettier -w src/**/*.{astro,js,vue}; stylelint src/styles/*",
     "start": "npm run dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "astro": "^0.23.7",
-    "less": "^4.1.2"
+    "@astrojs/tailwind": "^0.1.0",
+    "@astrojs/vue": "^0.0.2",
+    "@heroicons/vue": "^1.0.6",
+    "astro": "^1.0.0-beta.5",
+    "daisyui": "^2.13.6",
+    "husky": "^7.0.4",
+    "lodash.uniqueid": "^4.0.1",
+    "prettier-config-standard": "^5.0.0",
+    "prettier-plugin-astro": "^0.0.12",
+    "stylelint": "^14.6.1",
+    "stylelint-config-standard": "^25.0.0"
   }
 }
