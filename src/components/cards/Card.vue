@@ -5,7 +5,7 @@
         {{ title }}
       </header>
       <main>
-        <slot name="body"></slot>
+        <slot name="content"></slot>
       </main>
       <footer class="card-actions justify-end">
         <slot name="footer"></slot>
@@ -16,12 +16,12 @@
 
 <script>
 export default {
-  name: 'MyCard',
+  name: 'Card',
 
   props: {
     title: {
       type: String,
-      default: 'My card'
+      required: true
     }
   }
 }

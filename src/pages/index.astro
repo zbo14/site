@@ -1,12 +1,14 @@
 ---
 import DefaultLayout from '../layouts/default.astro'
-import MyDropdown from '../components/MyDropdown.vue'
-import MyError from '../components/MyError.vue'
-import MyModal from '../components/MyModal.vue'
-import MyWarning from '../components/MyWarning.vue'
-import MySuccess from '../components/MySuccess.vue'
-import MyInfo from '../components/MyInfo.vue'
-import MyExampleCard from '../components/MyExampleCard.vue'
+import Dropdown from '../components/dropdowns/Dropdown.vue'
+import Error from '../components/alerts/Error.vue'
+import Modal from '../components/modals/Modal.vue'
+import Warning from '../components/alerts/Warning.vue'
+import Success from '../components/alerts/Success.vue'
+import Info from '../components/alerts/Info.vue'
+import ExampleCard from '../components/cards/ExampleCard.vue'
+import ExampleCarousel from '../components/carousels/ExampleCarousel.vue'
+import ExampleNumberCarousel from '../components/carousels/ExampleNumberCarousel.vue'
 
 const links = [
   { label: 'option1', url: '#foo' },
@@ -18,18 +20,31 @@ const links = [
   <p class="my-4 text-xl">Welcome to your site!</p>
   <p class="my-4 text-lg">Here are some components:</p>
   <div>
-    <MyModal
-      label="hello modal"
-      title="Hello modal">
-      <p>modal content</p>
-    </MyModal>
+    <div class="my-4 row">
+      <Modal label="hello modal" title="Hello modal">
+        <p>modal content</p>
+      </Modal>
+    </div>
 
-    <MyDropdown links={links} />
-    <MyError message="this is an error message" />
-    <MyWarning message="this is a warning message" />
-    <MySuccess message="this is a success message" />
-    <MyInfo message="this is an info message" />
-    <MyExampleCard />
+    <div class="my-4 row">
+      <Dropdown label="dropdown" title="Menu" {links} />
+    </div>
+
+    <div class="my-4 row">
+      <Error message="this is an error message" />
+      <Warning message="this is a warning message" />
+      <Success message="this is a success message" />
+      <Info message="this is an info message" />
+    </div>
+
+    <div class="my-4 row">
+      <ExampleCard />
+    </div>
+
+    <div class="my-4 row">
+      <ExampleCarousel />
+      <ExampleNumberCarousel />
+    </div>
   </div>
 </DefaultLayout>
 

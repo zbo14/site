@@ -3,7 +3,7 @@
     {{ label }}
   </label>
 
-  <input type="checkbox" id="my-modal" class="modal-toggle">
+  <input type="checkbox" id="my-modal" class="modal-toggle" />
 
   <div class="modal">
     <div class="modal-box">
@@ -20,17 +20,17 @@
 
 <script>
 export default {
-  name: 'MyModal',
+  name: 'Modal',
 
   props: {
     label: {
       type: String,
-      default: 'My modal'
+      required: true
     },
 
     title: {
       type: String,
-      default: 'My modal'
+      required: true
     }
   }
 }

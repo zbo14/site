@@ -3,7 +3,9 @@
     <label tabindex="0" class="btn m-1">
       {{ label }}
     </label>
-    <ul tabindex="0" class="bg-white dropdown-content menu p-2 rounded-box shadow w-52">
+    <ul
+      tabindex="0"
+      class="bg-white dropdown-content menu p-2 rounded-box shadow w-52">
       <li>
         <a v-for="link in links" :href="link.url">
           {{ link.label }}
@@ -15,16 +17,17 @@
 
 <script>
 export default {
-  name: 'MyDropdown',
+  name: 'Dropdown',
 
   props: {
     label: {
       type: String,
-      default: 'My dropdown'
+      required: true
     },
 
     links: {
-      default: []
+      type: Array,
+      required: true
     }
   }
 }

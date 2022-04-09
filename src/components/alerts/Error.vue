@@ -1,25 +1,25 @@
 <template>
-  <MyAlert class="alert-error" label="Error" :message="message">
-    <ExclamationCircleIcon class="h-6 w-6"/>
-  </MyAlert>
+  <Alert class="alert-error" label="Error" :message="message">
+    <ExclamationCircleIcon class="h-6 w-6" />
+  </Alert>
 </template>
 
 <script>
-import MyAlert from './MyAlert.vue'
+import Alert from './Alert.vue'
 import { ExclamationCircleIcon } from '@heroicons/vue/outline'
 
 export default {
-  name: 'MyError',
+  name: 'Error',
 
   props: {
     message: {
       type: String,
-      default: 'there was an error :('
+      required: true
     }
   },
 
   components: {
-    MyAlert,
+    Alert,
     ExclamationCircleIcon
   }
 }
