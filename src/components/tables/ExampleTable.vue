@@ -1,5 +1,5 @@
 <template>
-  <Table>
+  <Table :zebra="true">
     <template #header>
       <th>foo</th>
       <th>bar</th>

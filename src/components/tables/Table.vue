@@ -1,6 +1,11 @@
 <template>
   <div class="overflow-x-auto">
-    <table class="table">
+    <table
+      :class="
+        ['table', compact && 'table-compact', zebra && 'table-zebra'].filter(
+          Boolean
+        )
+      ">
       <thead>
         <slot name="header" />
       </thead>
@@ -13,6 +18,18 @@
 
 <script>
 export default {
-  name: 'Table'
+  name: 'Table',
+
+  props: {
+    compact: {
+      type: Boolean,
+      default: false
+    },
+
+    zebra: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
