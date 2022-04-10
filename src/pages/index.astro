@@ -10,6 +10,7 @@ import ExampleCard from '../components/cards/ExampleCard.vue'
 import ExampleCarousel from '../components/carousels/ExampleCarousel.vue'
 import ExampleNumberCarousel from '../components/carousels/ExampleNumberCarousel.vue'
 import Collapse from '../components/collapse/Collapse.vue'
+import ExampleTable from '../components/tables/ExampleTable.vue'
 
 const links = [
   { label: 'option1', url: '#foo' },
@@ -20,6 +21,7 @@ const links = [
 <DefaultLayout>
   <p class="my-4 text-xl">Welcome to your site!</p>
   <p class="my-4 text-lg">Here are some components:</p>
+
   <div>
     <div class="my-4 row">
       <Modal label="hello modal" title="Hello modal">
@@ -51,6 +53,10 @@ const links = [
       <Collapse class="w-1/2" title="My collapsable">
         <p>now you see me</p>
       </Collapse>
+    </div>
+
+    <div class="my-4 row">
+      <ExampleTable />
     </div>
   </div>
 </DefaultLayout>

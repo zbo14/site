@@ -2,7 +2,7 @@
   <div
     tabindex="0"
     class="collapse collapse-arrow border border-base-300 bg-white rounded-box">
-    <input type="checkbox">
+    <input type="checkbox" />
     <div class="collapse-title text-xl font-medium">
       {{ title }}
     </div>
